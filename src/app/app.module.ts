@@ -3,14 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LaunchListComponent } from './launch-list/launch-list.component';
+import { LaunchDetailsComponent } from './launch-details/launch-details.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { RelativeTimePipe } from './relative-time.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LaunchListComponent,
+    LaunchDetailsComponent,
+    RelativeTimePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GraphQLModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
